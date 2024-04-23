@@ -36,7 +36,7 @@ const BestSeller = ({ isSkillRefInView }) => {
           className="text-[#AA4B0F] text-lg"
         >
           Topped with pepperoni, sausage, mushrooms, peppers, onions, and
-          olives, it's a flavor explosion. Finished with fresh basil, it's pizza
+          olives, its a flavor explosion. Finished with fresh basil, its pizza
           perfection!
         </motion.p>
       </div>
