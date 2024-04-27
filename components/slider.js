@@ -115,7 +115,7 @@ export const Slideshow = () => {
             }}
           />
         </AnimatePresence>
-        <div className=" w-1/2 h-full relative">
+        <div className=" w-3/4 h-full relative">
           <motion.h1
             key={imageIndex}
             custom={direction}
@@ -127,7 +127,7 @@ export const Slideshow = () => {
               x: { type: "spring", stiffness: 300, damping: 30 },
               opacity: { duration: 0.5 },
             }}
-            className="absolute top-20 left-20 text-white font-extrabold text-6xl bg-[#9A031E] px-3 py-2 rounded-md "
+            className="absolute top-20 left-20 text-white font-extrabold text-xl md:text-6xl bg-[#9A031E] px-3 py-2 rounded-md "
           >
             {contents[imageIndex].title}
           </motion.h1>
@@ -144,9 +144,9 @@ export const Slideshow = () => {
             x: { type: "spring", stiffness: 300, damping: 30 },
             opacity: { duration: 0.5 },
           }}
-          className="absolute bottom-48 left-20 text-white font-bold text-xl py-[1px] rounded-md"
+          className="absolute bottom-48 left-20 text-white font-bold text-base md:text-xl py-[1px] rounded-md"
         >
-          <h2 className="text-white w-fit font-bold text-xl bg-[#9A031E] px-1 py-[1px] rounded-md my-5">
+          <h2 className="text-white w-fit font-bold text-base md:text-xl bg-[#9A031E] px-1 py-[1px] rounded-md my-5">
             {contents[imageIndex].row2}
           </h2>
         </motion.div>

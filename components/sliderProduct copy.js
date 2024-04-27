@@ -90,7 +90,7 @@ export const SlideshowProduct = () => {
   if (contents.length != 0) {
     return (
       <div className=" h-[85vh] relative flex flex-row m-auto box-border">
-        <div className="relative flex flex-col md:flex-row w-full">
+        <div className=" relative flex flex-col md:flex-row w-full">
           <div className=" relative flex-1 h-full w-full flex items-center justify-center md:ml-20">
             <motion.img
               key={imageIndex}
@@ -120,7 +120,7 @@ export const SlideshowProduct = () => {
               }}
             />
           </div>
-          <div className="flex-1 w-full h-full md:mr-20 flex flex-col items-center justify-center">
+          <div className=" flex-1 w-full h-full relative md:mr-20 flex items-center">
             <motion.h1
               key={imageIndex}
               custom={direction}
@@ -132,7 +132,7 @@ export const SlideshowProduct = () => {
                 x: { type: "spring", stiffness: 300, damping: 30 },
                 opacity: { duration: 0.5 },
               }}
-              className="text-[#FB8B24] font-bold md:font-extrabold text-lg md:text-4xl px-3 py-2 rounded-md underline"
+              className="absolute top-[calc(10%)] md:top-[calc(10%)] text-[#FB8B24] font-bold md:font-extrabold text-lg md:text-4xl px-3 py-2 rounded-md underline"
             >
               {contents[imageIndex].title}
             </motion.h1>
@@ -147,9 +147,9 @@ export const SlideshowProduct = () => {
                 x: { type: "spring", stiffness: 300, damping: 30 },
                 opacity: { duration: 0.5 },
               }}
-              className=" text-white font-bold text-xl py-[1px] rounded-md max-w-96"
+              className="absolute top-[calc(20%)] md:top-[calc(15%)] left-20 text-white font-bold text-xl py-[1px] rounded-md"
             >
-              <h2 className="text-[#FB8B24] text-center md:font-bold text-sm md:text-xl px-1 py-[1px] rounded-md my-5">
+              <h2 className="text-[#FB8B24] w-fit md:font-bold text-sm md:text-xl px-1 py-[1px] rounded-md my-5">
                 {contents[imageIndex].row2}
               </h2>
             </motion.div>
@@ -164,7 +164,7 @@ export const SlideshowProduct = () => {
                 x: { type: "spring", stiffness: 300, damping: 30 },
                 opacity: { duration: 0.5 },
               }}
-              className=" md:top-2/4 left-20 text-[#FB8B24] font-bold md:font-extrabold text-lg md:text-4xl px-3 py-2 rounded-md underline"
+              className="absolute top-[calc(60%)] md:top-2/4 left-20 text-[#FB8B24] font-bold md:font-extrabold text-lg md:text-4xl px-3 py-2 rounded-md underline"
             >
               Compotition
             </motion.h1>
@@ -179,9 +179,9 @@ export const SlideshowProduct = () => {
                 x: { type: "spring", stiffness: 300, damping: 30 },
                 opacity: { duration: 0.5 },
               }}
-              className="text-white font-bold text-xl py-[1px] rounded-md max-w-96"
+              className="absolute top-[calc(70%)] md:top-[calc(55%)] left-20 text-white font-bold text-xl py-[1px] rounded-md"
             >
-              <h2 className="text-[#FB8B24] text-center md:font-bold text-sm md:text-xl px-1 py-[1px] rounded-md my-5">
+              <h2 className="text-[#FB8B24] w-fit md:font-bold text-sm md:text-xl  px-1 py-[1px] rounded-md my-5">
                 {contents[imageIndex].compotition}
               </h2>
             </motion.div>

@@ -5,15 +5,14 @@ import { motion } from "framer-motion";
 
 const BestSeller = ({ isSkillRefInView }) => {
   return (
-    <div className=" h-screen bg-[#FEFAF6] flex p-16">
+    <div className=" min-h-screen bg-[#FEFAF6] flex flex-col md:flex-row p-16">
       <div className=" flex-1 flex flex-col gap-5 px-3 py-10">
         {/* TEXT */}
         <div className=" w-fit">
-          {/* <h1 className="text-[#FB8B24] text-5xl mb-2">BEST SELLER</h1> */}
           <motion.h1
             initial={{ x: "-300px" }}
             animate={isSkillRefInView ? { x: 0 } : {}}
-            transition={{ delay: 0.2 }}
+            transition={{ delay: 0.2, duration: 0.3 }}
             className="font-bold text-3xl text-[#AA4B0F]"
           >
             BEST SELLER
@@ -23,7 +22,7 @@ const BestSeller = ({ isSkillRefInView }) => {
         <motion.p
           initial={{ x: "-1000px" }}
           animate={isSkillRefInView ? { x: 0 } : {}}
-          transition={{ delay: 0.2 }}
+          transition={{ delay: 0.2, duration: 0.3 }}
           className=" text-[#AA4B0F] text-lg"
         >
           Introducing Supreme Delight: A best-seller with hand-tossed crust,
@@ -32,7 +31,7 @@ const BestSeller = ({ isSkillRefInView }) => {
         <motion.p
           initial={{ x: "-1000px" }}
           animate={isSkillRefInView ? { x: 0 } : {}}
-          transition={{ delay: 0.2 }}
+          transition={{ delay: 0.2, duration: 0.3 }}
           className="text-[#AA4B0F] text-lg"
         >
           Topped with pepperoni, sausage, mushrooms, peppers, onions, and
@@ -42,7 +41,12 @@ const BestSeller = ({ isSkillRefInView }) => {
       </div>
       <div className=" flex-1 flex items-center justify-center ">
         {/* IMAGE */}
-        <Image src="/p1.png" width={500} height={500} alt="" />
+        <div className=" hidden md:block">
+          <Image src="/p1.png" width={500} height={500} alt="" />
+        </div>
+        <div className=" md:hidden">
+          <Image src="/p1.png" width={250} height={250} alt="" />
+        </div>
       </div>
     </div>
   );

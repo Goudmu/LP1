@@ -3,7 +3,7 @@ import BestSeller from "@/components/bestSeller";
 import Footer from "@/components/footer";
 import { Slideshow } from "@/components/slider";
 import { SlideshowProduct } from "@/components/sliderProduct";
-import { useInView, useScroll } from "framer-motion";
+import { useInView, useScroll, motion } from "framer-motion";
 import { useRef } from "react";
 
 export default function Home() {
@@ -19,9 +19,18 @@ export default function Home() {
       <div className=" h-screen" ref={skillRef}>
         <BestSeller isSkillRefInView={isSkillRefInView} />
       </div>
-      <div className=" m-auto mb-6 bg-[#9A031E] w-fit px-3 py-1 rounded-md">
-        <h1 className=" text-6xl text-white">OUR PRODUCTS</h1>
-      </div>
+      <motion.div
+        className=" m-auto mt-10 md:mt-0 mb-6 bg-[#9A031E] w-fit px-3 py-1 rounded-md"
+        initial={{ y: "-50px", opacity: 0.5 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{
+          duration: 1,
+          ease: "easeInOut",
+          repeat: Infinity,
+        }}
+      >
+        <h1 className=" text-xl md:text-6xl text-white">OUR PRODUCTS</h1>
+      </motion.div>
       <SlideshowProduct />
       <Footer />
     </div>
