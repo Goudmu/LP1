@@ -20,16 +20,17 @@ export default function Home() {
         <BestSeller isSkillRefInView={isSkillRefInView} />
       </div>
       <motion.div
-        className=" m-auto mt-10 md:mt-0 mb-6 bg-[#9A031E] w-fit px-3 py-1 rounded-md"
-        initial={{ y: "-50px", opacity: 0.5 }}
-        animate={{ y: 0, opacity: 1 }}
+        className=" m-auto mt-10 md:mt-0 mb-6 w-fit px-3 py-1 rounded-md"
+        initial={{ y: "0px", opacity: 0.5 }}
+        animate={{ y: "50px", opacity: 1 }}
         transition={{
           duration: 1,
           ease: "easeInOut",
           repeat: Infinity,
+          repeatType: "mirror",
         }}
       >
-        <h1 className=" text-xl md:text-6xl text-white">OUR PRODUCTS</h1>
+        <h1 className=" text-xl md:text-6xl text-[#9A031E]">OUR PRODUCTS</h1>
       </motion.div>
       <SlideshowProduct />
       <Footer />

@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const variants = {
   initial: (direction) => {
     return {
-      x: direction > 0 ? 1000 : -1000,
+      x: direction > 0 ? 100 : -100,
       opacity: 0,
     };
   },
@@ -17,7 +17,7 @@ const variants = {
   exit: (direction) => {
     return {
       zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
+      x: direction < 0 ? 100 : -100,
       opacity: 0,
     };
   },
@@ -26,7 +26,7 @@ const variants = {
 const variantsH1 = {
   initial: (direction) => {
     return {
-      x: direction > 0 ? 4000 : -4000,
+      x: direction > 0 ? 130 : -130,
       opacity: 0,
     };
   },
@@ -38,7 +38,7 @@ const variantsH1 = {
   exit: (direction) => {
     return {
       zIndex: 0,
-      x: direction < 0 ? 4000 : -4000,
+      x: direction < 0 ? 130 : -130,
       opacity: 0,
     };
   },

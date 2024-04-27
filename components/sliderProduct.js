@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const variants = {
   initial: (direction) => {
     return {
-      x: direction > 0 ? 1000 : -1000,
+      x: direction > 0 ? 100 : -100,
       opacity: 0,
     };
   },
@@ -17,7 +17,7 @@ const variants = {
   exit: (direction) => {
     return {
       zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
+      x: direction < 0 ? 100 : -100,
       opacity: 0,
     };
   },
@@ -26,7 +26,7 @@ const variants = {
 const variantsH1 = {
   initial: (direction) => {
     return {
-      x: direction > 0 ? 4000 : -4000,
+      x: direction > 0 ? 150 : -150,
       opacity: 0,
     };
   },
@@ -38,7 +38,7 @@ const variantsH1 = {
   exit: (direction) => {
     return {
       zIndex: 0,
-      x: direction < 0 ? 4000 : -4000,
+      x: direction < 0 ? 150 : -150,
       opacity: 0,
     };
   },
@@ -61,6 +61,13 @@ const contents = [
     image: "./p2.png",
     compotition:
       "Thin crispy crust, Tomato sauce, Mozzarella cheese, Fresh basil leaves",
+  },
+  {
+    title: "Vegetarian Garden Feast",
+    row2: "Savor the bounty of nature with our Vegetarian Garden Feast! A hearty whole wheat crust is adorned with robust marinara sauce and an abundance of farm-fresh vegetables, including colorful bell peppers, juicy tomatoes, mushrooms, spinach, and red onions. It's a veggie lover's dream come true!.",
+    image: "./p3.png",
+    compotition:
+      "Whole wheat crust, Marinara sauce, Bell peppers (assorted colors), Tomatoes, Mushrooms, Spinach, Red onions",
   },
 ];
 
